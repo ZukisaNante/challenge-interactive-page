@@ -1,0 +1,53 @@
+/*Container*/
+
+.container {
+    background-color: darkcyan;
+    color: white;
+}
+
+
+/*Header*/
+
+.header {
+    background-color: aquamarine;
+    color: white;
+    padding: 0%;
+    height: 100px;
+    width: 100vw;
+}
+
+
+/*Tabs*/
+
+.tabs {
+    background-color: crimson;
+    color: white;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+
+/*imageSlide*/
+
+.imageSlides {
+    padding: 50px;
+    border: 1px saddlebrown;
+    height: 100px;
+}
+
+
+/*GoogleMaps*/
+
+.googleMaps {
+    background-color: lightseagreen;
+    padding: 10px;
+    border: 1px salmon;
+}
+
+
+/*Footer*/
+
+.footer {
+    background-color: aquamarine;
+    border: 1px seagreen;
+}
