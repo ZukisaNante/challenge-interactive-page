@@ -1,20 +1,5 @@
 //declaring variables
 var images = ('../mg/UNISA-Cover-Photo.jpg', '../mg/unisa-main-campus-1024x576.jpg', '../mg/Unisa-campus.png', '../mg/15-Best-Universities-in-the-UK-for-International-Students.jpg', '../mg/12186.jpg', '../mg/15-Best-Universities-in-the-UK-for-International-Students.jpg', '../mg/7426748-11442669.jpg', '../mg/Corpus-Christi-Oxford.jpg', '../mg/google_place_photo.png', '../mg/rlscs8u6jep21.jpg', '../mg/stanford-university-best-universities-in-the-united-states-2016.jpg');
-/* let previousImage = document.getElementById('preBtn');
-let nextImage = document.getElementById('nextBtn');
-let imageNumber = 0;
-let imageLength = images.length - 1; */
-//function to count delay show
-window.setInterval(function() {
-    changeImage(1);
-}, 3000); // 3 seconds
-//function previous
-/* function previousShowedImage(check) {
-    check.addEventLister('click', imageLength);
-    document.getElementsByClassName('imageSlides').innerHTML = imageLength;
-}
-//output
-previousShowedImage(); */
 
 //copied js
 var slider = document.getElementById('slider')
@@ -38,4 +23,39 @@ function runSlider() {
         dotsChild[i].classList.remove('active');
         dotsChild[dnum].classList.add('active');
     }
+}
+//count 3 seconds
+function showSlides() {
+    var i;
+
+    // get the array of divs' with classname image-sliderfade 
+    var slides = slider.getElementsByTagName('div');
+
+    // get the array of divs' with classname dot 
+    var dots = document.getElementsByClassName('list-inline dots');
+
+    for (i = 0; i < slides.length; i++) {
+        // initially set the display to  
+        // none for every image. 
+        slides[i].style.display = "none";
+    }
+
+    // increase by 1, Global variable 
+    slideIndex++;
+
+    // check for boundary 
+    if (slideIndex > slides.length) {
+        slideIndex = 1;
+    }
+
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.
+        replace(" active", "");
+    }
+
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+
+    // Change image every 3 seconds 
+    setTimeout(showSlides, 3000);
 }

@@ -35,10 +35,11 @@
 
 /*GoogleMaps*/
 
-.googleMaps {
-    background-color: lightseagreen;
-    padding: 10px;
-    border: 1px salmon;
+.container-fluid {
+    margin: auto;
+    width: 50%;
+    border: 1px solid green;
+    padding: 0%;
 }
 
 
